@@ -23,16 +23,12 @@ def run_automation():
         return
 
     # 2. Adapt for Twitter
-    #twitter_content = content_adapter.adapt_for_twitter(main_content)
+    twitter_content = content_adapter.adapt_for_twitter(main_content)
     
     # Post to Twitter
-    #twitter_success = social_poster.TwitterPoster().post(twitter_content, media_path)
-    #print(f"Twitter Post Success: {twitter_success}")
+    twitter_success = social_poster.TwitterPoster().post(twitter_content, media_path)
+    print(f"Twitter Post Success: {twitter_success}")
     
-    # Post to LinkedIn
-    #linkedin_success = social_poster.LinkedInPoster().post(main_content, media_path)
-    #print(f"LinkedIn Post Success: {linkedin_success}")
-
     # Post to Facebook
     facebook_success = social_poster.FacebookPoster().post(main_content, media_path)
     print(f"Facebook Post Success: {facebook_success}")
