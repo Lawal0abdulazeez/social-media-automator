@@ -5,7 +5,8 @@ on:
   workflow_dispatch: # Allows manual triggering for tests
   schedule:
     # Runs at 13:00 UTC (e.g., 9 AM EST) every day
-    - cron: '0 13 * * *'
+    #- cron: '0 13 * * *'
+    - cron: '0 7 * * *' # Runs at 07:00 UTC (e.g., 3 AM EST) every day
 
 jobs:
   post-to-socials:
